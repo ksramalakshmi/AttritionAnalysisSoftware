@@ -1,20 +1,143 @@
 <html>
     <head>
         <title>Attrition Prediction Software</title>
+        <h1>Attrition Prediction Software</h1>
     </head>
     
     <body>
         <form>
             <label for="age">Age:&nbsp;</label>
-            <input type="number" id="age" name="age"><br>
+            <input type="number" id="age" name="age" min="18" max="60"><br>
 
             <label for="businesstravel">Business Travel:</label>
-
             <select name="businesstravel" id="businesstravel">
-                <option value="rare">Travel_Rarely</option>
-                <option value="frequent">Travel_Frequently</option>
-                <option value="nontravel">Non-Travel</option>
+                <option value="Travel Rarely">Travel_Rarely</option>
+                <option value="Travel Frequently">Travel_Frequently</option>
+                <option value="Non-Travel">Non-Travel</option>
             </select>
+            <br>
+
+            <label for="dailyrate">Daily Rate:&nbsp;</label>
+            <input type="number" id="dailyrate" name="dailyrate" min="0"><br>
+
+            <label for="dep">Department:</label>
+            <select name="dep" id="dep">
+                <option value="Research and Development">Research and Development</option>
+                <option value="Sales">Sales</option>
+                <option value="Human Resources">Human Resources</option>
+            </select>
+            <br>
+
+            <label for="dist">Distance From Home:&nbsp;</label>
+            <input type="number" id="dist" name="dist" min="0"><br>
+
+            <label for="education">Education:&nbsp;</label>
+            1<input type="range" id="education" name="education" min="1" max="5">5<br>
+
+            <label for="ed_field">Education Field:</label>
+            <select name="ed_field" id="ed_field">
+                <option value="Life Sciences">Life Sciences</option>
+                <option value="Medical">Medical</option>
+                <option value="Marketing">Marketing</option>
+            </select>
+            <br>
+
+            <label for="emp_count">Employee Count:&nbsp;</label>
+            <input type="number" id="emp_count" name="emp_count" min="1"><br>
+
+            <label for="emp_num">Employee Number:&nbsp;</label>
+            <input type="number" id="emp_num" name="emp_num" min="1"><br>
+
+            <label for="emp_satf">Employee Satisfaction:&nbsp;</label>
+            1<input type="range" id="emp_satf" name="emp_satf" min="1" max="4">4<br>
+
+            <label for="gender">Gender:&nbsp;</label>
+            <input type="radio" id="gender" name="gender" value="Male"> Male
+            <input type="radio" id="gender" name="gender" value="Female"> Female<br>
+
+            <label for="hourlyrate">Hourly Rate:&nbsp;</label>
+            <input type="number" id="hourlyrate" name="hourlyrate" min="1"><br>
+
+            <label for="job_inv">Job Involvement:&nbsp;</label>
+            1<input type="range" id="job_inv" name="job_inv" min="1" max="4">4<br>
+
+            <label for="job_level">Job Level:&nbsp;</label>
+            1<input type="range" id="job_level" name="job_level" min="1" max="5">5<br>
+
+            <label for="job_role">Job Role:</label>
+            <select name="job_role" id="job_role">
+                <option value="Sales Executive">Sales Executive</option>
+                <option value="Research Scientist">Research Scientist</option>
+                <option value="Laboratory Technician">Laboratory Technician</option>
+            </select>
+            <br>
+
+            <label for="job_satf">Job Satisfaction:&nbsp;</label>
+            1<input type="range" id="job_satf" name="job_satf" min="1" max="4">4<br>
+
+            <label for="maritial">Maritial Status:</label>
+            <select name="maritial" id="maritial">
+                <option value="Maried">Maried</option>
+                <option value="Single">Single</option>
+                <option value="Divorced">Divorced</option>
+            </select>
+            <br>
+
+            <label for="income">Monthly Income:&nbsp;</label>
+            <input type="number" id="income" name="income" min="1"><br>
+
+            <label for="monthly_rate">Monthly Rate:&nbsp;</label>
+            <input type="number" id="monthly_rate" name="monthly_rate" min="1"><br>
+
+            <label for="no_comp">No. of Companies Worked With:&nbsp;</label>
+            <input type="number" id="no_comp" name="no_comp" min="0"><br>
+
+            <label for="over18">Over 18:&nbsp;</label>
+            <input type="radio" id="over18" name="over18" value="Y"> True
+            <input type="radio" id="over18" name="over18" value="N"> False<br>
+
+            <label for="overtime">Over Time:&nbsp;</label>
+            <input type="radio" id="overtime" name="overtime" value="Yes"> True
+            <input type="radio" id="overtime" name="overtime" value="No"> False<br>
+
+            <label for="salary_hike">Percent Of Salary Hike:&nbsp;</label>
+            <input type="number" id="salary_hike" name="salary_hike" min="1"><br>
+
+            <label for="perf_rate">Performance Rating:&nbsp;</label>
+            1<input type="range" id="perf_rate" name="perf_rate" min="1" max="4">4<br>
+
+            <label for="rel_satf">Relationship Satisfaction:&nbsp;</label>
+            1<input type="range" id="rel_satf" name="rel_satf" min="1" max="4">4<br>
+
+            <label for="Std_hrs">Standard Hours:&nbsp;</label>
+            <input type="number" id="Std_hrs" name="Std_hrs" min="1"><br>
+
+            <label for="stock_opt">Stock Option Level:&nbsp;</label>
+            0<input type="range" id="stock_opt" name="stock_opt" min="0" max="3">3<br>
+
+            <label for="work_yrs">Total Working Years:&nbsp;</label>
+            <input type="number" id="work_yrs" name="work_yrs" min="0"><br>
+
+            <label for="train_times">Training Times Last Year:&nbsp;</label>
+            <input type="number" id="train_times" name="train_times" min="0"><br>
+
+            <label for="work_life_bal">Work Life Balance:&nbsp;</label>
+            1<input type="range" id="work_life_bal" name="work_life_bal" min="1" max="4">4<br>
+
+            <label for="comp_yrs">Years At Company:&nbsp;</label>
+            <input type="number" id="comp_yrs" name="comp_yrs" min="0"><br>
+
+            <label for="curr_role_yrs">Years In Current Role:&nbsp;</label>
+            <input type="number" id="curr_role_yrs" name="curr_role_yrs" min="0"><br>
+
+            <label for="yrs_promo">Years Since Last Promotion:&nbsp;</label>
+            <input type="number" id="yrs_promo" name="yrs_promo" min="0"><br>
+
+            <label for="yrs_curr_mang">Years With Current Manager:&nbsp;</label>
+            <input type="number" id="yrs_curr_mang" name="yrs_curr_mang" min="0"><br>
+            <br>
+
+            <button type="submit">Submit</button>
         </form>
     </body>
 </html>
