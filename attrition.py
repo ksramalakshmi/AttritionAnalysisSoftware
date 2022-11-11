@@ -12,9 +12,9 @@ ann = tf.keras.models.load_model('AttritionANN')
 
 # dataset = pd.read_csv('web/sample.csv')
 
-def predict_attrition(dataset):
-    dataset = pd.read_csv('test_data.csv')
-    dataset_final = pd.read_csv('test_data.csv')
+def predict_attrition(input_filepath, output_filepath):
+    dataset = pd.read_csv(input_filepath)
+    dataset_final = pd.read_csv(input_filepath)
     dataset = dataset.drop(["Over18"], axis = 1)
     dataset = dataset.values
 
@@ -46,7 +46,7 @@ def predict_attrition(dataset):
     results = pd.DataFrame(results, columns=['Attrition Results'])
 
     results = pd.concat([dataset_final, results], axis=1)
-    if (results.to_csv('predictions.csv')):
+    if (results.to_csv(output_filepath)):
         return 'Results Predicted'
     else:
         return 'Input Error'
