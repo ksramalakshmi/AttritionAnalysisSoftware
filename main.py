@@ -10,7 +10,7 @@ app.config['UPLOAD_FOLDER'] = "data"
 @app.route('/')
 def render():
    return render_template('index.html')
-	
+
 @app.route('/upload',  methods = ['POST'])
 def upload_file():
     if request.method == 'POST': 
@@ -22,6 +22,10 @@ def upload_file():
         attrition.predict_attrition(filepath, output_filepath)
         data = pd.read_csv(output_filepath)
         return render_template('table.html', tables=[data.to_html()], titles=[''])
+
+@app.route('/eda')
+def display():
+   return render_template('eda.html')
 
 if __name__ == '__main__':
    app.run(debug = True)
